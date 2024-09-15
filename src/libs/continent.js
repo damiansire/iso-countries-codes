@@ -10,17 +10,17 @@ const countryCodes = require("./countryCodes");
  * southamerica
  * antarctica
  */
-function getCountriesByContinent(continent) {
+const getCountriesByContinent = (continent) => {
   const filteredCountries = codes.filter((country) => country.continent.toLowerCase() === continent.toLowerCase());
   return filteredCountries;
-}
+};
 
-function getContinentByCountryCode(countryCode) {
+const getContinentByCountryCode = (countryCode) => {
   const country = countryCodes.find((country) => country.code === countryCode.toUpperCase());
   return country ? country : null;
-}
+};
 
-function getAllCountriesByContinent(countryCodes) {
+const getAllCountriesByContinent = (countryCodes) => {
   return countryCodes.reduce((continents, country) => {
     const continent = country.continent;
 
@@ -35,4 +35,10 @@ function getAllCountriesByContinent(countryCodes) {
 
     return continents;
   }, {});
-}
+};
+
+module.exports = {
+  getCountriesByContinent,
+  getContinentByCountryCode,
+  getAllCountriesByContinent,
+};
