@@ -253,3 +253,7 @@ const codes = [
 const getAllCountriesNames = () => {
   return codes.map((x) => x.name);
 };
+
+const getAllCountriesCodes = () => {
+  return codes.map((x) => x.code);
+};
