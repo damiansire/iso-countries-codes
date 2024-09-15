@@ -14,3 +14,8 @@ function getCountriesByContinent(continent) {
   const filteredCountries = codes.filter((country) => country.continent.toLowerCase() === continent.toLowerCase());
   return filteredCountries;
 }
+
+function getContinentByCountryCode(countryCode) {
+  const country = countryCodes.find((country) => country.code === countryCode.toUpperCase());
+  return country ? country : null;
+}
