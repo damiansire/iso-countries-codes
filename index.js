@@ -249,3 +249,7 @@ const codes = [
   { name: "Zimbabwe", code: "ZW" },
   { name: "Åland Islands", code: "AX" },
 ];
+
+const getAllCountriesNames = () => {
+  return codes.map((x) => x.name);
+};
