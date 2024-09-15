@@ -262,3 +262,8 @@ const getCountryNameFromCountryCode = (countryCode) => {
   const country = codes.find((item) => item.code.toUpperCase() === countryCode.toUpperCase());
   return country ? country.name : null;
 };
+
+const getCountryCodeFromCountryName = (countryName) => {
+  const country = codes.find((item) => item.name.toUpperCase() === countryName.toUpperCase());
+  return country ? country.code : null;
+};
