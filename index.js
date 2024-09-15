@@ -257,3 +257,8 @@ const getAllCountriesNames = () => {
 const getAllCountriesCodes = () => {
   return codes.map((x) => x.code);
 };
+
+const getCountryNameFromCountryCode = (countryCode) => {
+  const country = codes.find((item) => item.code.toUpperCase() === countryCode.toUpperCase());
+  return country ? country.name : null;
+};
